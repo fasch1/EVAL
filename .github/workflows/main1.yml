@@ -40,7 +40,7 @@ jobs:
           ipfs swarm peers
           ipfs add hervé.war > ipfs_key.txt
         shell: alpine.sh --root {0}
-            - name: Notification Discord
+      - name: Notification Discord
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         run: |
