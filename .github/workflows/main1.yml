@@ -1,4 +1,4 @@
-name: branlette collective
+name: Industrialisation continue sur le serveur AWS (Tomcat)
 on: push
 jobs:
   build:
@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - run: |
-          jar cvf agathe.war *
+          jar cvf hervé.war *
       - uses: jirutka/setup-alpine@v1
         with:
           branch: v3.15
@@ -33,7 +33,7 @@ jobs:
           apk add go-ipfs
           ipfs init
           ipfs daemon &
-        shell: hervé.sh --root {0}
+        shell: alpine.sh --root {0}
       - name: Sauvegarde fichier war sur IPFS
         run: |
           ls -la 
