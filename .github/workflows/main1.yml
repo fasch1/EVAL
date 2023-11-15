@@ -25,7 +25,7 @@ deploy:
   steps:
     - uses: actions/checkout@master
     - run: |
-        jar cvf fichier.war *
+        jar cvf hervé.war *
     - uses: jirutka/setup-alpine@v1
       with:
         branch: v3.15
@@ -38,5 +38,5 @@ deploy:
       run: |
         ls -la 
         ipfs swarm peers
-        ipfs add fichier.war
+        ipfs add hervé.war
       shell: alpine.sh --root {0}
