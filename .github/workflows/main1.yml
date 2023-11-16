@@ -37,7 +37,7 @@ jobs:
         run: |
           ls -la 
           ipfs swarm peers
-          ipfs add flasch1.war
+          ipfs add flasch1.war >ipfs_key.txt
         shell: alpine.sh --root {0}
       - name: Notification Discord
         env:
