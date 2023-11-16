@@ -24,7 +24,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - run: |
-          jar cvf fichier.war *
+          jar cvf flasch1.war *
       - uses: jirutka/setup-alpine@v1
         with:
           branch: v3.15
@@ -37,7 +37,7 @@ jobs:
         run: |
           ls -la 
           ipfs swarm peers
-          ipfs add fichier.war
+          ipfs add flasch1.war
         shell: alpine.sh --root {0}
       - name: Notification Discord
         env:
